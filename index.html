@@ -17,20 +17,34 @@
             </div>
             <div class="modal-body">
                 <form action="/">
-                    <input type="text" id="title" placeholder="Title of announcement">
-                    <select name="brand" id="brand">
-                        <option value="brand A"></option>
-                        <option value="brand B"></option>
-                        <option value="brand C"></option>
-                        <option value="brand D"></option>
-                    </select>
-                    <input type="number" id="year" placeholder="Manufacturing Year">
-                    <input type="number" id="mileage" placeholder="Mileage">
-                    <select name="fuel" id="fuel">
-                        <option value="fuel A"></option>
-                        <option value="fuel B"></option>
-                        <option value="fuel C"></option>
-                    </select>
+                    <div class="form-section">
+                        <input type="text" id="title" placeholder="Title of announcement">
+                        <select name="brand" id="brand">
+                            <option value="brand A">brand A</option>
+                            <option value="brand B">brand B</option>
+                            <option value="brand C">brand C</option>
+                            <option value="brand D">brand D</option>
+                        </select>
+                        <input type="number" id="year" placeholder="Manufacturing Year">
+                        <input type="number" id="mileage" placeholder="Mileage">
+                        <select name="fuel" id="fuel">
+                            <option value="fuel A">fuel A</option>
+                            <option value="fuel B">fuel B</option>
+                            <option value="fuel C">fuel C</option>
+                        </select>
+                        <p>input type color</p>
+                    </div>
+                    <div class="form-section">
+                        <label for="damaged">Vehicle damaged (Yes/No)</label>
+                        <input type="checkbox" id="damaged">
+                        <input type="number" id="price">
+                        <select name="currency" id="currency">
+                            <option value="RON">RON</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                        <input type="submit" id="submit">
+                    </div>
                 </form>
             </div>
         </div>
