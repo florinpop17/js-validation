@@ -50,16 +50,23 @@ brandSelect.onchange = function(){
     });
 
     // show image only if the brand different than 'no', which is the default value of the select
-    if(brand !== 'no')
+    if(brand !== 'no'){
         document.querySelectorAll('.'+brand)[0].style.display = 'block';
+    }
 }
 
 // change color of the selected-color span corresponding to the selected color
 colorSelect.onchange = function(){
     var color = this.value;
+    var selectedColorSpan = document.querySelectorAll('.selected-color')[0];
 
-    document.querySelectorAll('.selected-color')[0].style.backgroundColor = color;
-    console.log(color);
+    if(color !== 'no'){
+        selectedColorSpan.style.backgroundColor = color;
+        selectedColorSpan.style.borderWidth = '1px';
+    } else {
+        selectedColorSpan.style.backgroundColor = 'transparent';
+        selectedColorSpan.style.borderWidth = '0px';
+    }
 }
 
 function formIsValid() {

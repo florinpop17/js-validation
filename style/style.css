@@ -102,8 +102,10 @@ html, body {
 
 /* Color span for selected color */
 .selected-color {
+    border: 0px solid black;
     display: inline-block;
     margin-bottom: -2px;
+    margin-left: 10px;
     height: 15px;
     width: 15px;
 }
