@@ -28,8 +28,8 @@ form.reset();
 form.onsubmit = function(e){
     e.preventDefault();
 
-    // remove error messages and clear input/select fields
-    clearFields();
+    // remove error messages
+    clearPTags();
 
     // validate the form
     if(formIsValid()){
@@ -86,9 +86,10 @@ openModal.onclick = function() {
     modal.style.display = 'block';
 }
 
-// hide modal and reset form when the X was clicked
+// hide modal, remove error messages (if there are any) and reset form when the X was clicked
 closeModal.onclick = function() {
     form.reset();
+    clearPTags();
     modal.style.display = 'none';
 }
 
@@ -151,7 +152,7 @@ function createPTag(text, element){
     element.parentNode.insertBefore(p, element.nextSibling);
 }
 
-function clearFields() {
+function clearPTags() {
 
     // remove all the error messages p tags
     var errorP = document.querySelectorAll('.text-error');

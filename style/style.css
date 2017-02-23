@@ -90,7 +90,7 @@ html, body {
     margin-bottom: 5px;
 }
 
-.form-item-container input:not([type='checkbox']), .form-item-container select, .form-item-container textarea {
+.form-item-container input[type='text'], .form-item-container select, .form-item-container textarea {
     border: 1px solid #ccc;
     border-radius: 0;
     font-size: 13px;
@@ -101,6 +101,16 @@ html, body {
 
 .form-item-container input[type='text'] {
     border-bottom: 4px solid #ccc;
+}
+
+.form-item-container input[type='submit'] {
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-item-container input[type='submit']:active {
+    /* for the clicking effect */
+    margin-top: 4px;
 }
 
 /* Initially we hide the damage details container */
@@ -138,12 +148,14 @@ html, body {
     border: 2px solid #2980b9;
     border-bottom-width: 6px;
     color: white;
+    cursor: pointer;
     padding: 10px 15px;
     text-decoration: none;
     transition: all 100ms ease-in;
 }
 
 .fancy-btn:active {
+    /* clicking effect */
     border-bottom-width: 2px;
     top: calc(50% + 4px);
 }
