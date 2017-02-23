@@ -31,7 +31,7 @@ function formIsValid() {
 
     // check each input of type number, validate if it is number and if isn't empty
     inputNumbers.forEach(input => {
-        if(input.value === ''){
+        if(input.value === '' || isNaN(input.value)){
             allValid = false;
         }
     });
@@ -42,5 +42,7 @@ function formIsValid() {
             allValid = false;
         }
     });
+
+    // return the flag
     return allValid;
 }

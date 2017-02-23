@@ -17,7 +17,6 @@ html, body {
 
 .text-error {
     color: #c0392b;
-    display:none;
     font-size: 14px;
     margin-top: 5px;
 }
