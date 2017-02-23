@@ -41,16 +41,41 @@ html, body {
 }
 
 .text-error:after {
-	border-color: rgba(192, 57, 43, 0);
 	border-bottom-color: #c0392b;
 	border-width: 10px;
 	margin-left: -10px;
 }
+
 .text-error:before {
-	border-color: rgba(192, 57, 43, 0);
 	border-bottom-color: #c0392b;
 	border-width: 13px;
 	margin-left: -13px;
+}
+
+/* Fancy button style */
+.fancy-btn {
+    background-color: #3498db;
+    border-radius: 5px;
+    border: 2px solid #2980b9;
+    border-bottom-width: 6px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 100ms ease-in;
+}
+
+.fancy-btn:active {
+    /* clicking effect */
+    border-bottom-width: 2px;
+    top: calc(50% + 4px);
+}
+
+.position-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Modal styles */
@@ -78,6 +103,19 @@ html, body {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
     margin-bottom: 20px;
+}
+
+/* Image holder style */
+.brand-image-holder {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Initially hide all images */
+.brand-image-holder img {
+    width: 80%;
+    display: none;
 }
 
 .form-item-container {
@@ -119,19 +157,6 @@ html, body {
     display: none;
 }
 
-/* Image holder style */
-.brand-image-holder {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-/* Initially hide all images */
-.brand-image-holder img {
-    width: 80%;
-    display: none;
-}
-
 /* Color span for selected color */
 .selected-color {
     border: 0px solid black;
@@ -140,32 +165,6 @@ html, body {
     margin-left: 10px;
     height: 15px;
     width: 15px;
-}
-
-/* Fancy button style */
-.fancy-btn {
-    background-color: #3498db;
-    border-radius: 5px;
-    border: 2px solid #2980b9;
-    border-bottom-width: 6px;
-    color: white;
-    cursor: pointer;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: all 100ms ease-in;
-}
-
-.fancy-btn:active {
-    /* clicking effect */
-    border-bottom-width: 2px;
-    top: calc(50% + 4px);
-}
-
-.position-center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* Close modal button style */
