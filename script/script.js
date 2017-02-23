@@ -2,9 +2,14 @@ var form = document.getElementById('add-form');
 var inputNumbers = document.querySelectorAll('input.number');
 var selects = document.querySelectorAll('select');
 var title = document.getElementById('title')
+
+// damaged checkbox and textarea variables
 var damagedCheckbox = document.getElementById('damaged');
 var damageDetails = document.getElementById('damage-details');
 var damageDetailsContainer = document.getElementById('damage-details-container');
+
+// select brand variables
+var brandSelect = document.getElementById('brand');
 
 // First we reset the form to default
 form.reset();
@@ -29,6 +34,20 @@ damagedCheckbox.onchange = function(){
     } else {
         damageDetailsContainer.style.display = 'none';
     }
+}
+
+// show corresponding image based on the selected brand
+brandSelect.onchange = function(){
+    var brand = this.value;
+    var images = document.querySelectorAll('.brand-image-holder img');
+
+    // first we hide all images
+    images.forEach(image => {
+        image.style.display = 'none';
+    });
+
+    // show image
+    document.querySelectorAll('.'+brand)[0].style.display = 'block';
 }
 
 function formIsValid() {
