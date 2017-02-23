@@ -11,6 +11,9 @@ var damageDetailsContainer = document.getElementById('damage-details-container')
 // select brand variables
 var brandSelect = document.getElementById('brand');
 
+// select color
+var colorSelect = document.getElementById('color');
+
 // First we reset the form to default
 form.reset();
 
@@ -49,6 +52,14 @@ brandSelect.onchange = function(){
     // show image only if the brand different than 'no', which is the default value of the select
     if(brand !== 'no')
         document.querySelectorAll('.'+brand)[0].style.display = 'block';
+}
+
+// change color of the selected-color span corresponding to the selected color
+colorSelect.onchange = function(){
+    var color = this.value;
+
+    document.querySelectorAll('.selected-color')[0].style.backgroundColor = color;
+    console.log(color);
 }
 
 function formIsValid() {
