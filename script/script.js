@@ -11,9 +11,12 @@ form.reset();
 form.onsubmit = function(e){
     e.preventDefault();
 
+    // remove error messages and clear input/select fields
+    clearFields();
+
     // validate the form
     if(formIsValid()){
-        alert('All good!');
+        alert('Form submitted!');
     }
 }
 
@@ -35,11 +38,11 @@ function formIsValid() {
         if(input.value === ''){
             allValid = false;
             createPTag('Field is required!', input);
-        }
-
-        if(isNaN(input.value)){
-            allValie = false;
-            createPTag('Please enter a number!' input);
+        } else {
+            if(isNaN(input.value)){
+                allValid = false;
+                createPTag('Please enter a valid number!', input);
+            }
         }
     });
 
@@ -55,7 +58,7 @@ function formIsValid() {
     return allValid;
 }
 
-function createPTag(text, parent){
+function createPTag(text, element){
     // create a p tag element
     var p = document.createElement('p');
 
@@ -67,8 +70,24 @@ function createPTag(text, parent){
     p.innerHTML = text;
 
     // append the p tag after the input/select field
-    parent.parentNode.insertBefore(p, parent.nextSibling);
+    element.parentNode.insertBefore(p, element.nextSibling);
 
     // add error class to the input/select field
-    parent.className = 'error-field'
+    element.className = 'error-field'
+}
+
+function clearFields() {
+
+    // remove all the error messages p tags
+    var errorP = document.querySelectorAll('.text-error');
+    errorP.forEach(p => {
+        p.parentNode.removeChild(p);
+    });
+
+    // remove error classes from input/select tags
+    var errorFields = document.querySelectorAll('.error-field');
+
+    errorFields.forEach(field => {
+        field.className = '';
+    });
 }
