@@ -11,7 +11,7 @@
 
     <div class="modal-container">
         <div class="modal">
-            <div class="modal-header">
+            <div class="modal-header text-center">
                 <h1>Add product</h1>
                 <h3>Second-hand Car</h3>
                 <small><strong>Category:</strong> Automobiles</small>
@@ -19,32 +19,52 @@
             <div class="modal-body">
                 <form action="/">
                     <div class="form-section">
-                        <input type="text" id="title" placeholder="Title of announcement">
-                        <select name="brand" id="brand">
-                            <option value="brand A">brand A</option>
-                            <option value="brand B">brand B</option>
-                            <option value="brand C">brand C</option>
-                            <option value="brand D">brand D</option>
-                        </select>
-                        <input type="text" id="year" placeholder="Manufacturing Year">
-                        <input type="text" id="mileage" placeholder="Mileage">
-                        <select name="fuel" id="fuel">
-                            <option value="fuel A">fuel A</option>
-                            <option value="fuel B">fuel B</option>
-                            <option value="fuel C">fuel C</option>
-                        </select>
-                        <p>input type color</p>
+                        <div class="form-item-container">
+                            <input type="text" id="title" placeholder="Title of announcement">
+                        </div>
+                        <div class="form-item-container">
+                            <select name="brand" id="brand">
+                                <option value="brand A">brand A</option>
+                                <option value="brand B">brand B</option>
+                                <option value="brand C">brand C</option>
+                                <option value="brand D">brand D</option>
+                            </select>
+                        </div>
+                        <div class="form-item-container">
+                            <input type="text" id="year" placeholder="Manufacturing Year">
+                        </div>
+                        <div class="form-item-container">
+                            <input type="text" id="mileage" placeholder="Mileage">
+                        </div>
+                        <div class="form-item-container">
+                            <select name="fuel" id="fuel">
+                                <option value="fuel A">fuel A</option>
+                                <option value="fuel B">fuel B</option>
+                                <option value="fuel C">fuel C</option>
+                            </select>
+                        </div>
+                        <div class="form-item-container">
+                            <p>input type color</p>
+                        </div>
                     </div>
                     <div class="form-section">
-                        <label for="damaged">Vehicle damaged (Yes/No)</label>
-                        <input type="checkbox" id="damaged">
-                        <input type="text" id="price">
-                        <select name="currency" id="currency">
-                            <option value="RON">RON</option>
-                            <option value="USD">USD</option>
-                            <option value="EUR">EUR</option>
-                        </select>
-                        <input type="submit" id="submit" value="Submit">
+                        <div class="form-item-container">
+                            <label for="damaged">Vehicle damaged (Yes/No)</label>
+                            <input type="checkbox" id="damaged">
+                        </div>
+                        <div class="form-item-container">
+                            <input type="text" id="price">
+                        </div>
+                        <div class="form-item-container">
+                            <select name="currency" id="currency">
+                                <option value="RON">RON</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                        <div class="form-item-container">
+                            <input type="submit" id="submit" value="Submit">
+                        </div>
                     </div>
                 </form>
             </div>

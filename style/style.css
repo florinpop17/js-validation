@@ -1,3 +1,4 @@
+/* General styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +6,16 @@
 }
 
 html, body {
+    color: #333;
+    font-family: Roboto, sans-serif;
     height: 100%;
 }
 
+.text-center {
+    text-align: center;
+}
+
+/* Modal styles */
 .modal-container {
     background-color: rgba(40, 40, 40, 0.5);
     padding-top: 18%;
@@ -20,4 +28,21 @@ html, body {
     padding: 20px;
     margin-left: calc(50% - 250px);
     width: 500px;
+}
+
+.modal-header {
+    border-bottom: 2px solid #ccc;
+}
+
+.form-item-container {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.form-item-container input:not([type='checkbox']), .form-item-container select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px 10px;
+    width: 100%;
 }
