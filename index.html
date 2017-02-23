@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="modal-container">
+    <div class="modal-container" id="modal">
         <div class="modal">
             <div class="modal-header text-center">
                 <h1>Add product</h1>
@@ -21,6 +21,10 @@
                     <img src="http://www.izmostock.com/wp-content/uploads/2015/12/fiat.png" alt="fiat" class="fiat"/>
                     <img src="http://www.izmostock.com/wp-content/uploads/2015/12/mini.gif" alt="mini" class="mini"/>
                 </div>
+
+                <a href="#" id="close-modal">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF3_Bp6uIXZ9m4-nPI9UX2rzk5d6Pd41jivkMJ8aZzeQu03AKzztRj8JE" alt="closeIcon">
+                </a>
             </div>
             <div class="modal-body">
                 <form action="/" id="add-form">
@@ -81,6 +85,9 @@
                         <div class="form-item-container">
                             <label for="color">Color: <span class="selected-color"></span></label>
                             <select name="color" id="color">
+
+                                <!-- You could use even hex color code for the option value -->
+
                                 <option value="no">Select a color...</option>
                                 <option value="black">Black</option>
                                 <option value="white">White</option>

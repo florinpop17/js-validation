@@ -1,4 +1,5 @@
 var form = document.getElementById('add-form');
+var modal = document.getElementById('modal');
 var inputNumbers = document.querySelectorAll('input.number');
 var selects = document.querySelectorAll('select');
 var title = document.getElementById('title')
@@ -13,6 +14,9 @@ var brandSelect = document.getElementById('brand');
 
 // select color
 var colorSelect = document.getElementById('color');
+
+// close modal button
+var closeModal = document.getElementById('close-modal');
 
 // First we reset the form to default
 form.reset();
@@ -67,6 +71,12 @@ colorSelect.onchange = function(){
         selectedColorSpan.style.backgroundColor = 'transparent';
         selectedColorSpan.style.borderWidth = '0px';
     }
+}
+
+// hide modal and reset form when the X was clicked
+closeModal.onclick = function() {
+    form.reset();
+    modal.style.display = 'none';
 }
 
 function formIsValid() {
@@ -126,9 +136,6 @@ function createPTag(text, element){
 
     // append the p tag after the input/select field
     element.parentNode.insertBefore(p, element.nextSibling);
-
-    // add error class to the input/select field
-    //element.className = 'error-field'
 }
 
 function clearFields() {
@@ -137,12 +144,5 @@ function clearFields() {
     var errorP = document.querySelectorAll('.text-error');
     errorP.forEach(p => {
         p.parentNode.removeChild(p);
-    });
-
-    // remove error classes from input/select tags
-    var errorFields = document.querySelectorAll('.error-field');
-
-    errorFields.forEach(field => {
-        field.className = '';
     });
 }
