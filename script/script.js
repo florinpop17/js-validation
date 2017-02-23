@@ -31,6 +31,11 @@ form.onsubmit = function(e){
     // validate the form
     if(formIsValid()){
         alert('Form submitted!');
+        // you can add any logic you want here...
+        // I'm gonna reset the form and hide the modal
+        form.reset();
+        modal.style.display = 'none';
+
     }
 }
 
