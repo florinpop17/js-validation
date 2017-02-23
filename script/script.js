@@ -2,7 +2,9 @@ var form = document.getElementById('add-form');
 var inputNumbers = document.querySelectorAll('input.number');
 var selects = document.querySelectorAll('select');
 var title = document.getElementById('title')
-var damaged = document.getElementById('damaged');
+var damagedCheckbox = document.getElementById('damaged');
+var damageDetails = document.getElementById('damageDetails');
+var damageDetailsContainer = document.getElementById('damage-details-container');
 
 // First we reset the form to default
 form.reset();
@@ -17,6 +19,15 @@ form.onsubmit = function(e){
     // validate the form
     if(formIsValid()){
         alert('Form submitted!');
+    }
+}
+
+// show/hide the damage details container based on the damaged checkbox
+damagedCheckbox.onchange = function(){
+    if(this.checked){
+        damageDetailsContainer.style.display = 'block';
+    } else {
+        damageDetailsContainer.style.display = 'none';
     }
 }
 
@@ -53,6 +64,11 @@ function formIsValid() {
             createPTag('Select an option!', select);
         }
     });
+
+    // if the damaged checkbox is checked, add validation on the details field
+    if(damagedCheckbox.checked){
+
+    }
 
     // return the flag
     return allValid;
