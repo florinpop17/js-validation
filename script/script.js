@@ -1,4 +1,9 @@
 var form = document.getElementById('add-form');
 
 // First we reset the form to default
-console.log(form);
+form.reset();
+
+// Form validation on submit
+form.onsubmit = function(e){
+    e.preventDefault();
+}
