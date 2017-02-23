@@ -57,7 +57,7 @@ html, body {
     margin-bottom: 5px;
 }
 
-.form-item-container input:not([type='checkbox']), .form-item-container select {
+.form-item-container input:not([type='checkbox']), .form-item-container select, .form-item-container textarea {
     border: 1px solid #ccc;
     border-radius: 0;
     font-size: 13px;
@@ -76,7 +76,12 @@ html, body {
     font-size: 15px;
 }
 
-.form-item-container input.error-field, .form-item-container select.error-field {
+.form-item-container input.error-field, .form-item-container select.error-field, .form-item-container textarea.error-field{
     border-color: #c0392b;
     color: #c0392b;
+}
+
+/* Initially we hide the damage details container */
+#damage-details-container{
+    display: none;
 }
