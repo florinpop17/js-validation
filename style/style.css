@@ -45,15 +45,27 @@ html, body {
     width: 100%;
 }
 
-.form-item-container input:not([type='checkbox']), .form-item-container select {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 10px;
-    width: 100%;
-}
-
 .form-item-container label {
     display: inline-block;
     font-size: 14px;
     margin-bottom: 5px;
+}
+
+.form-item-container input:not([type='checkbox']), .form-item-container select {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 13px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.form-item-container input[type='text'] {
+    border-bottom: 5px solid #ccc;
+}
+
+.form-item-container input[type='submit']{
+    background-color: #2980b9;
+    border: 0;
+    color: white;
+    font-size: 15px;
 }
