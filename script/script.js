@@ -15,6 +15,9 @@ var brandSelect = document.getElementById('brand');
 // select color
 var colorSelect = document.getElementById('color');
 
+// open modal button
+var openModal = document.getElementById('open-modal');
+
 // close modal button
 var closeModal = document.getElementById('close-modal');
 
@@ -76,6 +79,11 @@ colorSelect.onchange = function(){
         selectedColorSpan.style.backgroundColor = 'transparent';
         selectedColorSpan.style.borderWidth = '0px';
     }
+}
+
+// show modal on click
+openModal.onclick = function() {
+    modal.style.display = 'block';
 }
 
 // hide modal and reset form when the X was clicked
