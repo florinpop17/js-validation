@@ -15,6 +15,12 @@ html, body {
     text-align: center;
 }
 
+.text-error {
+    color: #c0392b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 /* Modal styles */
 .modal-container {
     background-color: rgba(40, 40, 40, 0.5);
