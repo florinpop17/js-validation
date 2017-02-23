@@ -17,6 +17,7 @@ html, body {
 
 .text-error {
     color: #c0392b;
+    display:none;
     font-size: 14px;
     margin-top: 5px;
 }
@@ -74,4 +75,9 @@ html, body {
     border: 0;
     color: white;
     font-size: 15px;
+}
+
+.form-item-container input.required-error, .form-item-container select.required-error {
+    border-color: #c0392b;
+    color: #c0392b;
 }
