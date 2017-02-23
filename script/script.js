@@ -128,7 +128,7 @@ function createPTag(text, element){
     element.parentNode.insertBefore(p, element.nextSibling);
 
     // add error class to the input/select field
-    element.className = 'error-field'
+    //element.className = 'error-field'
 }
 
 function clearFields() {

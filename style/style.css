@@ -16,9 +16,39 @@ html, body {
 }
 
 .text-error {
+    border: 1px solid #c0392b;
+    border-radius: 3px;
+    background-color: rgba(192, 57, 43, 0.2);
     color: #c0392b;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px;
+    position: relative;
+    margin-top: 15px;
+}
+
+/* small arrow css design */
+.text-error:after, .arrow_box:before {
+	bottom: 100%;
+	left: 20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+
+.text-error:after {
+	border-color: rgba(192, 57, 43, 0);
+	border-bottom-color: #c0392b;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.text-error:before {
+	border-color: rgba(192, 57, 43, 0);
+	border-bottom-color: #c0392b;
+	border-width: 13px;
+	margin-left: -13px;
 }
 
 /* Modal styles */
@@ -75,11 +105,6 @@ html, body {
     border: 0;
     color: white;
     font-size: 15px;
-}
-
-.form-item-container input.error-field, .form-item-container select.error-field, .form-item-container textarea.error-field{
-    border-color: #c0392b;
-    color: #c0392b;
 }
 
 /* Initially we hide the damage details container */
