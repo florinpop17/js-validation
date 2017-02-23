@@ -20,10 +20,13 @@
                 <form action="/">
                     <div class="form-section">
                         <div class="form-item-container">
-                            <input type="text" id="title" placeholder="Title of announcement">
+                            <label for="title">Title of announcement:</label>
+                            <input type="text" id="title"/>
                         </div>
                         <div class="form-item-container">
+                            <label for="brand">Brand:</label>
                             <select name="brand" id="brand">
+                                <option value="no" selected="selected">Select a brand...</option>
                                 <option value="brand A">brand A</option>
                                 <option value="brand B">brand B</option>
                                 <option value="brand C">brand C</option>
@@ -31,13 +34,17 @@
                             </select>
                         </div>
                         <div class="form-item-container">
-                            <input type="text" id="year" placeholder="Manufacturing Year">
+                            <label for="year">Manufacturing Year:</label>
+                            <input type="text" id="year"/>
                         </div>
                         <div class="form-item-container">
-                            <input type="text" id="mileage" placeholder="Mileage">
+                            <label for="mileage">Mileage:</label>
+                            <input type="text" id="mileage"/>
                         </div>
                         <div class="form-item-container">
+                            <label for="fuel">Fuel type:</label>
                             <select name="fuel" id="fuel">
+                                <option value="no" selected="selected">Select fuel type...</option>
                                 <option value="fuel A">fuel A</option>
                                 <option value="fuel B">fuel B</option>
                                 <option value="fuel C">fuel C</option>
@@ -53,10 +60,13 @@
                             <input type="checkbox" id="damaged">
                         </div>
                         <div class="form-item-container">
-                            <input type="text" id="price">
+                            <label for="price">Price:</label>
+                            <input type="text" id="price" placeholder="Price">
                         </div>
                         <div class="form-item-container">
+                            <label for="currency">Currency:</label>
                             <select name="currency" id="currency">
+                                <option value="no" selected="selected">Select currency...</option>
                                 <option value="RON">RON</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
