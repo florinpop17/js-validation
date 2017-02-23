@@ -1,5 +1,6 @@
 /* General styles */
 * {
+    /* reset */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -145,7 +146,7 @@ html, body {
 .fancy-btn {
     background-color: #3498db;
     border-radius: 5px;
-    border: 2px solid #2980b9;
+    border: 2px solid #29ffff;
     border-bottom-width: 6px;
     color: white;
     cursor: pointer;
