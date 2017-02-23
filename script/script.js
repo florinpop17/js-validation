@@ -3,7 +3,7 @@ var inputNumbers = document.querySelectorAll('input.number');
 var selects = document.querySelectorAll('select');
 var title = document.getElementById('title')
 var damagedCheckbox = document.getElementById('damaged');
-var damageDetails = document.getElementById('damageDetails');
+var damageDetails = document.getElementById('damage-details');
 var damageDetailsContainer = document.getElementById('damage-details-container');
 
 // First we reset the form to default
@@ -66,8 +66,9 @@ function formIsValid() {
     });
 
     // if the damaged checkbox is checked, add validation on the details field
-    if(damagedCheckbox.checked){
-
+    if(damagedCheckbox.checked && damageDetails.value === ''){
+        allValid = false;
+        createPTag('Add crash details!', damageDetails);
     }
 
     // return the flag
