@@ -91,10 +91,11 @@ html, body {
 .brand-image-holder {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 0;
 }
 
 /* Initially hide all images */
 .brand-image-holder img {
+    width: 80%;
     display: none;
 }
