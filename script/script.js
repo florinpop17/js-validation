@@ -50,7 +50,7 @@ function formIsValid() {
     selects.forEach(select => {
         if(select.value === 'no'){
             allValid = false;
-            createPTag('Select a valid option!', select);
+            createPTag('Select an option!', select);
         }
     });
 
