@@ -103,13 +103,6 @@ html, body {
     border-bottom: 4px solid #ccc;
 }
 
-.form-item-container input[type='submit']{
-    background-color: #2980b9;
-    border: 0;
-    color: white;
-    font-size: 15px;
-}
-
 /* Initially we hide the damage details container */
 #damage-details-container{
     display: none;
@@ -138,8 +131,8 @@ html, body {
     width: 15px;
 }
 
-/* Open modal button style */
-#open-modal {
+/* Fancy button style */
+.fancy-btn {
     background-color: #3498db;
     border-radius: 5px;
     border: 2px solid #2980b9;
@@ -147,16 +140,19 @@ html, body {
     color: white;
     padding: 10px 15px;
     text-decoration: none;
+    transition: all 100ms ease-in;
+}
+
+.fancy-btn:active {
+    border-bottom-width: 2px;
+    top: calc(50% + 4px);
+}
+
+.position-center {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 100ms ease-in;
-}
-
-#open-modal:active {
-    border-bottom-width: 2px;
-    top: calc(50% + 4px);
 }
 
 /* Close modal button style */
