@@ -1,7 +1,8 @@
 var form = document.getElementById('add-form');
-var inputs = document.querySelectorAll('input[type="text"]');
+var inputNumbers = document.querySelectorAll('input.number');
 var selects = document.querySelectorAll('select');
-var damagedCheckbox = document.getElementById('damaged');
+var title = document.getElementById('title')
+var damaged = document.getElementById('damaged');
 
 // First we reset the form to default
 form.reset();
@@ -10,6 +11,7 @@ form.reset();
 form.onsubmit = function(e){
     e.preventDefault();
 
+    // validate the form
     if(formIsValid()){
         alert('All good!');
     } else {
@@ -18,12 +20,23 @@ form.onsubmit = function(e){
 }
 
 function formIsValid() {
+
+    // set a flag to true
     var allValid = true;
-    inputs.forEach(input => {
+
+    // if the title is empty set the flag to false
+    if(title.value === ''){
+        allValid = false;
+    }
+
+    // check each input of type number, validate if it is number and if isn't empty
+    inputNumbers.forEach(input => {
         if(input.value === ''){
             allValid = false;
         }
     });
+
+    // check each select to have other value than the default 'no'
     selects.forEach(select => {
         if(select.value === 'no'){
             allValid = false;
