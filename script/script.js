@@ -14,8 +14,6 @@ form.onsubmit = function(e){
     // validate the form
     if(formIsValid()){
         alert('All good!');
-    } else {
-        alert('something is wrong');
     }
 }
 
@@ -27,12 +25,16 @@ function formIsValid() {
     // if the title is empty set the flag to false
     if(title.value === ''){
         allValid = false;
+
+        // Create an error message
+        createPTag('Title is required!', title);
     }
 
     // check each input of type number, validate if it is number and if isn't empty
     inputNumbers.forEach(input => {
-        if(input.value === '' || isNaN(input.value)){
+        if(input.value === ''){
             allValid = false;
+            createPTag('Field is required!', input);
         }
     });
 
@@ -40,9 +42,25 @@ function formIsValid() {
     selects.forEach(select => {
         if(select.value === 'no'){
             allValid = false;
+            createPTag('Select a valid option!', select);
         }
     });
 
     // return the flag
     return allValid;
+}
+
+function createPTag(text, parent){
+    // create a p tag element
+    var p = document.createElement('p');
+
+    // set the class to text-error
+    // this will give it the error styling
+    p.className = 'text-error';
+
+    // add the text to the innerHTML
+    p.innerHTML = text;
+
+    // append the p tag after the input field
+    parent.parentNode.insertBefore(p, parent.nextSibling);
 }

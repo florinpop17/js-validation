@@ -76,7 +76,7 @@ html, body {
     font-size: 15px;
 }
 
-.form-item-container input.required-error, .form-item-container select.required-error {
+.form-item-container input.error-field, .form-item-container select.error-field {
     border-color: #c0392b;
     color: #c0392b;
 }
