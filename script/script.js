@@ -46,8 +46,9 @@ brandSelect.onchange = function(){
         image.style.display = 'none';
     });
 
-    // show image
-    document.querySelectorAll('.'+brand)[0].style.display = 'block';
+    // show image only if the brand different than 'no', which is the default value of the select
+    if(brand !== 'no')
+        document.querySelectorAll('.'+brand)[0].style.display = 'block';
 }
 
 function formIsValid() {
